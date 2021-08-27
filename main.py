@@ -22,7 +22,7 @@ def database():
     with conn:
       cursor=conn.cursor()
     cursor.execute('CREATE TABLE IF NOT EXISTS People (nombrec TEXT,Email TEXT,Ciudad TEXT,Matricula TEXT)')
-    cursor.execute('INSERT INTO People (nombrec,Email,Ciudad,Cedula) VALUES(?,?,?,?)',(nombre,email,ciudad,matricula,))
+    cursor.execute('INSERT INTO People (nombrec,Email,Ciudad,Matricula) VALUES(?,?,?,?)',(nombre,email,ciudad,matricula,))
     conn.commit()
 
 label_0 = Label(root, text="Formulario de Registro", width=20,font=("bold", 20))
